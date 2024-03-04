@@ -626,7 +626,7 @@ position_smoothing_enabled = true
 position_smoothing_speed = 7.0
 
 [node name="exit" parent="scene_objects" instance=ExtResource("5_q56mr")]
-position = Vector2(2015, 512)
+position = Vector2(2009, 511)
 scale = Vector2(2, 2)
 target_level = ExtResource("6_hl4de")
 

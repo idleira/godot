@@ -117,7 +117,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_1kam0")
 }],
-"loop": true,
+"loop": false,
 "name": &"collected",
 "speed": 10.0
 }, {
@@ -190,9 +190,9 @@ scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_4wh6d")
 animation = &"collected"
 autoplay = "default"
-frame_progress = 0.790604
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_d4sx4")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

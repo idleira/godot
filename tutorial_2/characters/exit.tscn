@@ -82,9 +82,9 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v6ujw"]
-size = Vector2(28, 47)
+size = Vector2(32, 49)
 
-[node name="exit" type="CharacterBody2D"]
+[node name="exit" type="Area2D"]
 script = ExtResource("1_1p3ab")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -95,3 +95,6 @@ frame_progress = 0.588507
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2, 9.5)
 shape = SubResource("RectangleShape2D_v6ujw")
+debug_color = Color(0.682353, 0.501961, 0.121569, 0.419608)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
