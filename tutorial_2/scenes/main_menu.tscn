@@ -1,0 +1,55 @@
+[gd_scene load_steps=5 format=3 uid="uid://bjppjrvcc0048"]
+
+[ext_resource type="Script" path="res://scenes/main_menu.gd" id="1_hc8yl"]
+[ext_resource type="Texture2D" uid="uid://t3ru73xphlef" path="res://images/Background/Brown.png" id="1_nxvv1"]
+[ext_resource type="Texture2D" uid="uid://djyuaqg4au0kn" path="res://images/cooltext452575874876395.png" id="2_288y0"]
+
+[sub_resource type="Shortcut" id="Shortcut_nt57r"]
+
+[node name="main_menu" type="Node"]
+script = ExtResource("1_hc8yl")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_right = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_nxvv1")
+stretch_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -338.0
+offset_top = -110.0
+offset_right = 354.0
+offset_bottom = 22.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_288y0")
+
+[node name="level1" type="Button" parent="."]
+offset_left = 257.0
+offset_top = 443.0
+offset_right = 456.0
+offset_bottom = 520.0
+theme_override_font_sizes/font_size = 25
+text = "Level 1"
+
+[node name="level2" type="Button" parent="."]
+offset_left = 699.0
+offset_top = 445.0
+offset_right = 898.0
+offset_bottom = 522.0
+theme_override_font_sizes/font_size = 25
+shortcut = SubResource("Shortcut_nt57r")
+text = "Level 2"
+
+[connection signal="pressed" from="level1" to="." method="_on_level_1_pressed"]
+[connection signal="pressed" from="level2" to="." method="_on_level_2_pressed"]
